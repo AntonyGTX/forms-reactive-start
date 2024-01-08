@@ -2,6 +2,7 @@
 .primary_btn {
     background-color: rgba(0, 0, 255, 0.871);
     padding: 4px 8px;
+    margin: 10px 0;
     color: whitesmoke;
     font-size: 12px;
     font-weight: 700;
@@ -17,6 +18,7 @@
 .dark_btn {
     background-color: black;
     padding: 4px 8px;
+    margin: 10px 0;
     color: whitesmoke;
     font-size: 12px;
     font-weight: 700;
@@ -30,19 +32,38 @@
 }
 
 .form_control {
-    padding: 2px;
+    padding: 2px 5px;
     font-size: 12px;
-    border: lightblue 1px solid;
-    border-radius: 2px;
+    border: lightblue 3px solid;
+    border-radius: 7px;
 }
 
 .form_group {
+    display: flex;
+    flex-direction: column  ;
     padding: 2px;
     margin: 10px 0;
+    justify-content: space-around;
 }
 
 .text-center {
     text-align: center;
+}
+
+.list_group {
+    list-style-type: none;
+    padding: 10px;
+    box-shadow: 3px 3px 4px rgb(199, 225, 236);
+}
+
+.list_group_items {
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: 500;
+    background-color: rgb(210, 230, 230);
+    border: 2px solid rgba(191, 229, 245, 0.735);
+    margin: 3px;
+    padding: 10px;
 }
 
 .nav-group {
@@ -52,6 +73,7 @@
 }
 
 .nav-list-items {
+    margin: 5px;
     text-decoration: none;
     justify-content: space-around;
 }
@@ -75,4 +97,12 @@
 .center_form {
     display: flex;
     justify-content: space-around;
+}
+
+.centered_div {
+  display: grid;
+  justify-content: space-around;
+  grid-column-gap: 25px;
+  grid-template-columns: 200px 200px 200px;
+  
 }

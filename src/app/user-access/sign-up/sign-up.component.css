@@ -121,3 +121,59 @@ form {
   justify-content: space-around;
 }
 
+
+.center_button_dev_smallScreen {
+  display: flex;
+  justify-content: space-around;
+}
+  
+@media(min-width:200px){
+  .side_bar_container {
+    display: none;
+  }
+
+  .hintText {
+    display: none;
+  }
+
+  .form_container {
+    width: 100%;
+  }
+
+  .formDesign {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+}
+
+@media(min-width:900px){
+  .side_bar_container {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+
+  .form_container {
+    width: 80%;
+  }
+
+  .center_button_dev_smallScreen button {
+    display: none;
+  }
+
+  .hintText {
+    display: flex;
+  }
+
+  .formDesign {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+}

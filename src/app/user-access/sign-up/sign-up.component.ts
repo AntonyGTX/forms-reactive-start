@@ -5,6 +5,8 @@ import { rejects } from 'assert';
 import { resolve } from 'dns';
 import { promise } from 'protractor';
 import { Observable } from 'rxjs/Observable';
+import { AuthorizationService } from '../authorization.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -14,10 +16,11 @@ import { Observable } from 'rxjs/Observable';
 export class SignUpComponent implements OnInit {
 
   gwnderSekect = true;
- 
 
   constructor(
     private fb: FormBuilder,
+    private router: Router,
+    private service: AuthorizationService
   ) { }
 
   ngOnInit(): void {
@@ -40,6 +43,13 @@ export class SignUpComponent implements OnInit {
 
 
   registerUser() {
-    console.log(this.SignupForm.value)
+    this.service.ProcedRegistration(this.SignupForm.value).subscribe(response => {
+      console.log(response);
+      alert('posted the form to server');
+      this.router.navigate(['login']);
+    },
+    error => {
+      alert("failed registration")
+    })
   }
 }

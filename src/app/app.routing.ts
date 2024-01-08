@@ -16,6 +16,7 @@ const routes: Routes = [
     { path: 'header', component:  HeaderComponent },
     { path: 'login', component:  LoginComponent },
     { path: 'signUp', component:  SignUpComponent },
+    { path: 'homrPage', component:  HomeComponent },
 ]
 
 
